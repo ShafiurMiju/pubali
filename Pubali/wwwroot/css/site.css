@@ -1,0 +1,191 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" >
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" >
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    color: #2D3748;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mt-50px {
+    margin-top: 50px;
+}
+
+.text-24{
+    font-size: 24px;
+}
+
+.text-18 {
+    font-size: 18px;
+}
+
+.text-14 {
+    font-size: 14px;
+}
+
+.text-252525 {
+    color: #252525;
+}
+
+.text-555555 {
+    color: #555555;
+}
+
+.w-60{
+    width:60%;
+}
+
+.h-200{
+    height: 200px;
+}
+
+.w-250 {
+    width: 250px;
+}
+
+.ml-300 {
+    margin-left: 300px;
+}
+
+
+.sidebar {
+    top: 20px;
+    left: 20px;
+    background-color: #EFEEEE;
+    height: 96vh;
+}
+
+.header {
+    background-image: url('../bg.svg'), linear-gradient( 268.57deg, #57A782 -0.71%, rgba(161, 167, 87, 0.682747) 39.98%, rgba(45, 125, 88, 0.81) 79.11%, rgba(132, 177, 156, 0.5) 98.36% );
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.singleMenu {
+    padding: 5px 10px;
+    transition: all 500ms linear;
+}
+
+.singleMenu.active {
+    background: #FFFFFF;
+    border-radius: 3px;
+    border-right: 2px solid #FA881E99;
+    font-weight: 600;    
+}
+
+.singleMenu:hover {
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+.singleMenu i{
+    padding: 4px 4px;
+    transition: all 500ms ease-in;
+
+}
+
+.singleMenu.active i{
+    padding: 4px 4px;
+    transition: ease-in 0.1s;
+    border-radius: 3px;
+    background: #006536;
+    color: white !important;
+
+}
+
+.singleMenu:hover i{
+    background: #006536;
+    color: white !important;
+    border-radius: 3px;
+}
+
+.dashboard {
+    top: 100px;
+    padding-left: 300px;
+}
+
+.law {
+    top: 100px;
+    margin-top: 20px;
+    padding-left: 300px;
+    max-height: 83vh;
+    overflow-y: auto;
+}
+
+.icon {
+    padding: 7px;
+    border-radius: 3px;
+    background: #006536;
+    color: white !important;
+}
+
+.chart {
+    background: #EFEEEE;
+    padding: 10px;
+    position: relative;
+    max-height: 320px;
+}
+
+.tableContainer {
+    background: #EFEEEE;
+    padding: 10px;
+}
+
+.row{
+    width: 100%;
+}
+
+canvas{
+    max-height: 260px !important;  
+}
+
+
+.calendar-day {
+    width: 14.28%;
+    padding: .55rem;
+    text-align: center;
+}
+
+
+.today {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #679D7B; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+::-webkit-scrollbar {
+    width: 1px; 
+}
+
+

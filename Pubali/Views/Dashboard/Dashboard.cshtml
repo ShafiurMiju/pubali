@@ -1,0 +1,292 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@model List<AreaBar>
+
+<div class="position-absolute dashboard" style="width: 99%; height: 85vh">
+    <div class="d-flex justify-content-between gap-4 align-items-center">
+        <div class="bg-white p-2 rounded d-flex justify-content-between gap-20 align-items-center" style="width:265px;">
+            <div>
+                <span style="color: #A0AEC0; font-size: 14px; font-weight:600">INPUT</span><br />
+                <span style="color: #2D3748; font-size: 14px">Data Input</span>
+            </div>
+            <i class="fa-solid fa-chart-simple icon"></i>
+        </div>
+        <div class="bg-white p-2 rounded d-flex justify-content-between gap-20 align-items-center" style="width:265px;">
+            <div>
+                <span style="color: #A0AEC0; font-size: 14px; font-weight:600">SEARCH</span><br />
+                <span style="color: #2D3748; font-size: 14px">Suit Case Search</span>
+            </div>
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+        </div>
+        <div class="bg-white p-2 rounded d-flex justify-content-between gap-20 align-items-center" style="width:265px;">
+            <div>
+                <span style="color: #A0AEC0; font-size: 14px; font-weight:600">CIRCULARS</span><br />
+                <span style="color: #2D3748; font-size: 14px">Necessary Laws</span>
+            </div>
+            <i class="fa-solid fa-wrench icon"></i>
+        </div>
+        <div class="bg-white p-2 rounded d-flex justify-content-between gap-20 align-items-center" style="width:265px;">
+            <div>
+                <span style="color: #A0AEC0; font-size: 14px; font-weight:600">REMINDER</span><br />
+                <span style="color: #2D3748; font-size: 14px">Monitoring</span>
+            </div>
+            <i class="fa-solid fa-desktop icon"></i>
+        </div>
+    </div>
+    <div class="mt-3" style="overflow-y: scroll; height: 83%;">
+        <div class="row">
+            <div class="col-md-8"">
+                <div class="chart rounded">
+                    <h2 style="font-size:16px; color: #343C6A; padding-bottom: 5px;">
+                        Region Wise Statistics
+                    </h2>
+                    <div class=" d-flex justify-content-center">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="chart rounded">
+                    <h2 style="font-size:16px; color: #343C6A; padding-bottom: 5px;">
+                        Overall Performances
+                    </h2>
+                    <div class=" d-flex justify-content-center">
+                        <canvas id="myPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-8">
+                <div class="tableContainer rounded d-flex justify-content-center flex-column">
+                    <h2 style="font-size:16px; color: #343C6A; padding-bottom: 5px;">
+                        Case Statement
+                    </h2>
+                    <table class="table" style="font-size: 12px">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Case Name</th>
+                                <th scope="col">A/C Name</th>
+                                <th scope="col">Court date</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cases in ViewBag.Cases)
+                            {
+                                <tr>
+                                    <td>@cases.CaseName</td>
+                                    <td>@cases.AccountName</td>
+                                    <td>@cases.CourtDate.ToShortDateString()</td>
+                                    <td>
+                                        <span class="rounded-3 text-white p-1 cursor-pointer @GetStatusClass(cases.Status)">
+                                            @cases.Status
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tableContainer rounded d-flex justify-content-center flex-column" style="font-size:12px;">
+                    <div id="calendar-header" class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 id="monthYear" style="font-size:14px;color: #343C6A;">February, 2024</h4>
+                        <div>
+                            <button id="prev" class="">&lt;</button>
+                            <button id="next" class="">&gt;</button>
+                        </div>
+                    </div>
+                    <div id="calendar" class="d-flex flex-wrap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    @functions {
+        public string GetStatusClass(string status)
+        {
+            return status switch
+            {
+                "Completed" => "bg-success",
+                "Delayed" => "bg-warning",
+                "At risk" => "bg-danger",
+                "On going" => "bg-primary",
+                _ => "bg-secondary"
+            };
+        }
+    }
+
+    const model = @Html.Raw(Json.Serialize(Model));
+
+    const data = {
+        labels: model.map(item => item.areaName),
+        datasets: [{
+            label: 'Percentage',
+            data: model.map(item => item.percentage),
+            backgroundColor: [
+                'rgba(52, 60, 106, 1)'
+            ],
+            borderColor: [
+                'rgba(52, 60, 106, 1)'
+            ],
+            borderWidth: 1,
+            borderRadius: 20,
+            borderSkipped: false,
+            barPercentage: 0.2,
+            
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.y !== null) {
+                                label += context.parsed.y + '%';
+                            }
+                            return label;
+                        }
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: false,
+                    text: 'Region Wise Statistics'
+                },
+            }
+        }
+    };
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const pieData = {
+        labels: ['Red','Green','Yellow','Grey'],
+        datasets: [{
+            label: 'Case Distribution',
+            data: [20, 30, 15, 35],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+            ],
+            hoverOffset: 4
+        }]
+    };
+
+    const pieConfig = {
+        type: 'pie',
+        data: pieData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false,
+                    position: 'top',
+                },
+                title: {
+                    display: false,
+                    text: 'Overall Performances'
+                }
+            }
+        },
+    };
+
+    const myPieChart = new Chart(
+        document.getElementById('myPieChart'),
+        pieConfig
+    );
+
+
+
+
+
+
+    const monthYear = document.getElementById('monthYear');
+    const calendar = document.getElementById('calendar');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+
+    let currentYear = 2024;
+    let currentMonth = 2; 
+
+    function generateCalendar(year, month) {
+        monthYear.textContent = `${monthNames[month]}, ${year}`;
+        calendar.innerHTML = '';
+
+        let firstDay = new Date(year, month, 1).getDay();
+        let daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        for (let i = 0; i < firstDay; i++) {
+            const cell = document.createElement('div');
+            cell.className = 'calendar-day';
+            calendar.appendChild(cell);
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const cell = document.createElement('div');
+            cell.className = 'calendar-day';
+            cell.textContent = day;
+
+            let isToday = new Date().getFullYear() === year &&
+                new Date().getMonth() === month &&
+                new Date().getDate() === day;
+            if (isToday) {
+                cell.classList.add('today');
+            }
+
+            calendar.appendChild(cell);
+        }
+    }
+
+    prev.addEventListener('click', () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        generateCalendar(currentYear, currentMonth);
+    });
+
+    next.addEventListener('click', () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        generateCalendar(currentYear, currentMonth);
+    });
+
+    generateCalendar(currentYear, currentMonth);
+</script>
