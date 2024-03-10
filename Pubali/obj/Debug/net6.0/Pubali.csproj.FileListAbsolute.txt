@@ -51,3 +51,4 @@ D:\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\Syst
 D:\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.AssemblyReference.cache
 D:\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.CopyComplete
+D:\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.sourcelink.json

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pubali")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62d4fdd31913e35b341442fbf7264e37bd3bd670")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pubali")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pubali")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

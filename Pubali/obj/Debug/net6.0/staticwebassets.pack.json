@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Pubali.bundle.scp.css"
     },
     {
+      "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\LawIcon.svg",
+      "PackagePath": "staticwebassets\\LawIcon.svg"
+    },
+    {
+      "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\Logo_dashboard.svg",
+      "PackagePath": "staticwebassets\\Logo_dashboard.svg"
+    },
+    {
       "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\bg.png",
       "PackagePath": "staticwebassets\\bg.png"
     },
@@ -21,8 +29,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\icon-documentation.svg",
+      "PackagePath": "staticwebassets\\icon-documentation.svg"
+    },
+    {
       "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\lib\\LawIcon.svg",
+      "PackagePath": "staticwebassets\\lib\\LawIcon.svg"
     },
     {
       "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -251,6 +267,14 @@
     {
       "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\logo.svg",
+      "PackagePath": "staticwebassets\\logo.svg"
+    },
+    {
+      "Id": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\profile.png",
+      "PackagePath": "staticwebassets\\profile.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Pubali.Microsoft.AspNetCore.StaticWebAssets.props",
