@@ -14,7 +14,7 @@
         </div>
         <div>
             <div class="d-flex gap-1" style="margin-right: 10px;">
-                <form class="d-flex gap-2">
+                <form method="post" enctype="multipart/form-data" class="d-flex gap-2">
                     <select class="rounded-2 border-secondary form-select" style="width:100px !important; padding: 6px 3px !important">
                         <option>Any</option>
                         <option>Any</option>
@@ -23,8 +23,10 @@
                         <option>Any</option>
                     </select>
                     <div class="d-flex align-items-center ">
-                        <input type="search" class="rounded-start px-2 border-1" style="font-size:14px; padding: 7px 0; border-right: 0 !important; " placeholder="Search Document" />
-                        <i class="fa-solid fa-magnifying-glass px-2 rounded-end" style="border: 0; background-color:#CF914B; padding:10.5px 3px;"></i>
+                        <input type="search" name="search" class="rounded-start px-2 border-1" style="font-size:14px; padding: 7px 0; border-right: 0 !important; " placeholder="Search Document" />
+                        <button type="submit" class=" px-2 rounded-end" style="border: 0; background-color:#CF914B; padding:6.5px 3px;">
+                            <i class="fa-solid fa-magnifying-glass" ></i>
+                        </button>
                     </div>
 
                 </form>

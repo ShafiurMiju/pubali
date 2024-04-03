@@ -19,7 +19,7 @@ namespace Pubali.Controllers
             _logger = logger;
         }
 
-
+        [HttpGet]
         public IActionResult Dashboard()
         {
             try
@@ -94,63 +94,83 @@ namespace Pubali.Controllers
             }
         }
 
-        public IActionResult Law()
+        [HttpGet]
+        public IActionResult Law(string search)
         {
             try
             {
                 var documents = new List<Law>();
 
-                using (var connection = new OracleConnection(connectionString))
+                if (ModelState.IsValid)
                 {
-                    connection.Open();
-                    using (var command = new OracleCommand("select * from law", connection))
+                    using (var connection = new OracleConnection(connectionString))
                     {
-                        using (var reader = command.ExecuteReader())
+                        connection.Open();
+                        using (var command = new OracleCommand("pubali.search_data", connection))
                         {
-                            while (reader.Read())
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            command.Parameters.Add("p_file_name", OracleDbType.Varchar2, direction: ParameterDirection.Input).Value = '%'+search+'%';
+
+                            OracleParameter data = new OracleParameter("p_data", OracleDbType.RefCursor) { Direction = ParameterDirection.Output };
+                            command.Parameters.Add(data);
+
+                            using (var reader = command.ExecuteReader())
                             {
-                                documents.Add(new Law
+                                while (reader.Read())
                                 {
-                                    Id = Convert.ToInt32(reader["id"]),
-                                    FileName = reader["file_name"].ToString(),
-                                    ContentType = reader["content_type"].ToString(),
-                                    FileSize = (Convert.ToInt32(reader["file_size"])/1024),
-                                    UploadedBy = reader["uploaded_by"].ToString(),
-                                    UploadDate = Convert.ToDateTime(reader["upload_date"])
-                                });
+                                    documents.Add(new Law
+                                    {
+                                        Id = Convert.ToInt32(reader["id"]),
+                                        FileName = reader["file_name"].ToString(),
+                                        ContentType = reader["content_type"].ToString(),
+                                        FileSize = (Convert.ToInt32(reader["file_size"]) / 1024),
+                                        UploadedBy = reader["uploaded_by"].ToString(),
+                                        UploadDate = Convert.ToDateTime(reader["upload_date"])
+                                    });
+                                }
                             }
                         }
-                    }
 
+                    }
+                    return View(documents);
                 }
-                return View(documents);
+                else
+                {
+                    using (var connection = new OracleConnection(connectionString))
+                    {
+                        connection.Open();
+                        using (var command = new OracleCommand("pubali.get_law_data", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            OracleParameter data = new OracleParameter("law_data", OracleDbType.RefCursor) { Direction = ParameterDirection.Output };
+                            command.Parameters.Add(data);
+
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    documents.Add(new Law
+                                    {
+                                        Id = Convert.ToInt32(reader["id"]),
+                                        FileName = reader["file_name"].ToString(),
+                                        ContentType = reader["content_type"].ToString(),
+                                        FileSize = (Convert.ToInt32(reader["file_size"]) / 1024),
+                                        UploadedBy = reader["uploaded_by"].ToString(),
+                                        UploadDate = Convert.ToDateTime(reader["upload_date"])
+                                    });
+                                }
+                            }
+                        }
+
+                    }
+                    return View(documents);
+                }
+                
+                
             }
             catch { return View("Error"); }
-        }
-
-        public IActionResult Download(int id)
-        {
-            using (var connection = new OracleConnection(connectionString))
-            {
-                connection.Open();
-                var command = new OracleCommand("SELECT id, file_name, file_content, content_type, file_size, uploaded_by, upload_date FROM Law WHERE id = :id", connection);
-                command.Parameters.Add(new OracleParameter("id", id));
-
-                using (var reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        return File(reader["file_content"] as byte[], reader["content_type"].ToString(), reader["file_name"].ToString());
-                    }
-                }
-            }
-
-            return NotFound();
-        }
-
-        public IActionResult Case()
-        {
-            return View();
         }
 
         [HttpPost]
@@ -197,10 +217,123 @@ namespace Pubali.Controllers
             return RedirectToAction("law");
         }
 
-        public IActionResult LawOfficer()
+        [HttpGet]
+        public IActionResult Download(int id)
+        {
+            using (var connection = new OracleConnection(connectionString))
+            {
+                connection.Open();
+                var command = new OracleCommand("SELECT id, file_name, file_content, content_type, file_size, uploaded_by, upload_date FROM Law WHERE id = :id", connection);
+                command.Parameters.Add(new OracleParameter("id", id));
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return File(reader["file_content"] as byte[], reader["content_type"].ToString(), reader["file_name"].ToString());
+                    }
+                }
+            }
+
+            return NotFound();
+        }
+
+        [HttpGet]
+        public IActionResult Case()
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult LawOfficer()
+        {
+            try
+            {
+                var officers = new List<LawOfficer>();
+
+                using (var connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    var command = new OracleCommand("SELECT * FROM LawOfficers", connection);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var officer = new LawOfficer
+                            {
+                                OfficerID = Convert.ToInt32(reader["OfficerID"]),
+                                FullName = reader["FullName"].ToString(),
+                                Title = reader["Title"].ToString(),
+                                PostingArea = reader["PostingArea"].ToString(),
+                                RegionName = reader["RegionName"].ToString(),
+                                DateOfJoining = Convert.ToDateTime(reader["DateOfJoining"]).ToString("dd-MM-yyyy"),
+                                MobileNumber = reader["MobileNumber"].ToString(),
+                                IP = reader["IP"].ToString(),
+                                Image = reader["OfficerImage"] as byte[],
+                            };
+                            officers.Add(officer);
+                        }
+                    }
+                }
+
+                return View(officers);
+            }
+            catch (Exception ex)
+            {
+                return View("Error: ", ex);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult FileSuit()
+        {
+            return View();
+        }
+        
+        
+        
+        
+        
+        
+        
+
+
+
+        /*[HttpPost]
+        public IActionResult UploadImage(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return RedirectToAction("law");
+            }
+
+
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyToAsync(memoryStream);
+
+                if (memoryStream.Length == 0)
+                {
+                    return RedirectToAction("law");
+                }
+
+                var fileContent = memoryStream.ToArray();
+
+                using (var connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    var command = new OracleCommand("UPDATE LawOfficers SET officerimage = :officerimage WHERE id = :id", connection);
+
+                    command.Parameters.Add("officerimage", OracleDbType.Blob).Value = fileContent;
+                    command.Parameters.Add("id", OracleDbType.Int32).Value = 1;
+
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            return RedirectToAction("law");
+        }*/
 
     }
 }

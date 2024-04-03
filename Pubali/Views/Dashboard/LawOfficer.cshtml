@@ -5,19 +5,26 @@
 <div class="position-absolute law w-100" style="height:83vh; overflow: auto; background-color: white">
     <div class="" style="margin:20px 0px">
         <div class="d-flex justify-content-center gap-4 flex-wrap">
-            @for (int i = 1; i<=4; i++)
+            @foreach (var officer in Model)
             {
                 <div class="rounded border" style="width: 420px;">
                     <div class="p-3" style="background-color: #DEFCD9">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h3 style="font-size:13px;">Law Ofiier</h3>
-                            <p class="rounded border" style="padding: 10px; font-size: 14px; background-color: #E9FEE6; color:#0D834A ; border-color:#0D834A">ID: #1234564645</p>
+                            <h3 style="font-size:13px;">Law Officer</h3>
+                            <p class="rounded border" style="padding: 10px; font-size: 14px; background-color: #E9FEE6; color:#0D834A ; border-color:#0D834A">ID: #@officer.OfficerID</p>
                         </div>
                         <div class="d-flex align-items-center">
-                            <img class="rounded" style="margin-right: 10px" src="/profile.png" />
+                            @if (officer.Image != null)
+                            {
+                                <img class="rounded" style="margin-right: 10px; height: 74px; width: 74px;" src="data:image/jpeg;base64,@Convert.ToBase64String(officer.Image)" alt="Officer Image"/>
+                            }
+                            else
+                            {
+                                <img class="rounded" style="margin-right: 10px" src="/profile.png" />
+                            }
                             <div class="">
-                                <h1 style="font-size:20px; font-weight:600;">Md. Sirajul Islam</h1>
-                                <h3 style="font-size:14px; color: #0D834A;">Senior Principal Officer</h3>
+                                <h1 style="font-size:20px; font-weight:600;">@officer.FullName</h1>
+                                <h3 style="font-size:14px; color: #0D834A;">@officer.Title</h3>
                             </div>
                         </div>
                     </div>
@@ -26,15 +33,15 @@
                             <h3 style="font-size: 14px">Posting Area :</h3>
                             <h3 style="font-size: 14px">Name of the Region :</h3>
                             <h3 style="font-size: 14px">Date Of Joining :</h3>
-                            <h3 style="font-size: 14px">Date of Joining :</h3>
-                            <h3 style="font-size: 14px">Mobile & IP :</h3>
+                            <h3 style="font-size: 14px">Mobile :</h3>
+                            <h3 style="font-size: 14px">IP :</h3>
                         </div>
                         <div class="col-md-7 d-flex flex-column gap-3">
-                            <h3 style="font-size:14px; color: #0D834A;">Motijheel Corporate Branch</h3>
-                            <h3 style="font-size:14px; color: #0D834A;">Dhaka</h3>
-                            <h3 style="font-size:14px; color: #0D834A;">05-06-2023</h3>
-                            <h3 style="font-size:14px; color: #0D834A;">28-05-2023</h3>
-                            <h3 style="font-size:14px; color: #0D834A;">01756269830, 1663</h3>
+                            <h3 style="font-size:14px; color: #0D834A;">@officer.PostingArea</h3>
+                            <h3 style="font-size:14px; color: #0D834A;">@officer.RegionName</h3>
+                            <h3 style="font-size:14px; color: #0D834A;">@officer.DateOfJoining</h3>
+                            <h3 style="font-size:14px; color: #0D834A;">@officer.MobileNumber</h3>
+                            <h3 style="font-size:14px; color: #0D834A;">@officer.IP</h3>
                         </div>
                     </div>
                 </div>
@@ -43,3 +50,4 @@
         </div>
     </div>
 </div>
+

@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Intern\\MVC\\Pubali\\Pubali\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F58CEE43-EE1F-4084-AFB7-1B1DAA7D77A7}|Pubali\\Pubali.csproj|d:\\intern\\mvc\\pubali\\pubali\\pubali\\views\\dashboard\\filesuit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F58CEE43-EE1F-4084-AFB7-1B1DAA7D77A7}|Pubali\\Pubali.csproj|solutionrelative:pubali\\views\\dashboard\\filesuit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F58CEE43-EE1F-4084-AFB7-1B1DAA7D77A7}|Pubali\\Pubali.csproj|d:\\intern\\mvc\\pubali\\pubali\\pubali\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F58CEE43-EE1F-4084-AFB7-1B1DAA7D77A7}|Pubali\\Pubali.csproj|solutionrelative:pubali\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F58CEE43-EE1F-4084-AFB7-1B1DAA7D77A7}|Pubali\\Pubali.csproj|d:\\intern\\mvc\\pubali\\pubali\\pubali\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F58CEE43-EE1F-4084-AFB7-1B1DAA7D77A7}|Pubali\\Pubali.csproj|solutionrelative:pubali\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pubali\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pubali\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAPAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T07:56:39.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileSuit.cshtml",
+              "DocumentMoniker": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\Views\\Dashboard\\FileSuit.cshtml",
+              "RelativeDocumentMoniker": "Pubali\\Views\\Dashboard\\FileSuit.cshtml",
+              "ToolTip": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\Views\\Dashboard\\FileSuit.cshtml",
+              "RelativeToolTip": "Pubali\\Views\\Dashboard\\FileSuit.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAIwEUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T08:08:13.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Pubali\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Pubali\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T08:04:44.091Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

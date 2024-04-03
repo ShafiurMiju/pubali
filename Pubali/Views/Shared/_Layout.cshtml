@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/Pubali.styles.css" asp-append-version="true" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body>
     <div class="vh-100">
@@ -52,22 +54,22 @@
                     <div class="mt-3">
                         <div>
                             <ul>
-                                <li class="singleMenu cursor-pointer active">
+                                <li class="singleMenu ">
                                     <i class="fa-solid fa-house text-success"></i>
                                     <a href="/Dashboard/Dashboard" class="" style="font-size:14px; margin-left:5px;">Dashboard</a>
                                 </li>
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-chart-simple"></i>
-                                    <a href="" class="" style="font-size:14px; margin-left:5px;">Data Input</a>
+                                    <a href="/Dashboard/FileSuit" class="" style="font-size:14px; margin-left:5px;">File Suit</a>
                                 </li>
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                     <a href="/Dashboard/Case" class="" style="font-size:14px; margin-left:5px;">Case Search</a>
                                 </li> 
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-wrench"></i>
                                     <a href="/Dashboard/Law" class="" style="font-size:14px; margin-left:5px;">Necessary Laws</a>
                                 </li>
@@ -77,29 +79,29 @@
                                     <a href="" class="" style="font-size:14px; margin-left:5px;">Panel Lawyers</a>
                                 </li>
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-scale-balanced"></i>
                                     <a href="/Dashboard/LawOfficer" class="" style="font-size:14px; margin-left:5px;">Law Officers</a>
                                 </li>
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-chart-pie"></i>
                                     <a href="" class="" style="font-size:14px; margin-left:5px;">Case Statements</a>
                                 </li>
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-desktop"></i>
                                     <a href="" class="" style="font-size:14px; margin-left:5px;">Monitoring</a>
                                 </li>
 
                                 <h3 style="font-size:16px; color: #343C6A; padding: 15px 15px 0 15px;">ACCOUNT SETTINGS</h3>
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-chart-pie"></i>
-                                    <a href="" class="" style="font-size:14px; margin-left:5px;">Profile</a>
+                                    <a href="/Profile/Profile" class="" style="font-size:14px; margin-left:5px;">Profile</a>
                                 </li>
 
-                                <li class="singleMenu cursor-pointer mt-2">
+                                <li class="singleMenu mt-2">
                                     <i class="fa-solid fa-desktop"></i>
                                     <a href="" class="" style="font-size:14px; margin-left:5px;">Account Setting</a>
                                 </li>
@@ -128,6 +130,40 @@
             <p class="text-right" style="font-size: 12px; color: #9A9A9A; padding-right:12px;"> &copy2024, Made with Pubali UI/UX Team</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.singleMenu a');
+
+            function setActiveMenuItem() {
+                // Remove 'active' class from all menu items
+                menuItems.forEach(item => {
+                    item.parentElement.classList.remove('active');
+                });
+
+                // Add 'active' class to menu item if href matches current URL
+                menuItems.forEach(item => {
+                    if (item.getAttribute('href') === window.location.pathname) {
+                        item.parentElement.classList.add('active');
+                    }
+                });
+            }
+
+            // Set active menu item on page load
+            setActiveMenuItem();
+
+            // Add click event listener to each menu item to update active class on click
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    menuItems.forEach(i => i.parentElement.classList.remove('active'));
+                    item.parentElement.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

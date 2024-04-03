@@ -50,5 +50,59 @@ D:\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\Syst
 D:\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.AssemblyReference.cache
-D:\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.CopyComplete
 D:\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.sourcelink.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\appsettings.Development.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\appsettings.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Pubali.staticwebassets.runtime.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Pubali.exe
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Pubali.deps.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Pubali.runtimeconfig.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Pubali.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Pubali.pdb
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.DirectoryServices.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.AssemblyReference.cache
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.GeneratedMSBuildEditorConfig.editorconfig
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.AssemblyInfoInputs.cache
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.AssemblyInfo.cs
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.CoreCompileInputs.cache
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.MvcApplicationPartsAssemblyInfo.cache
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.RazorAssemblyInfo.cache
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.RazorAssemblyInfo.cs
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.sourcelink.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\staticwebassets.build.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\staticwebassets.development.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\staticwebassets\msbuild.Pubali.Microsoft.AspNetCore.StaticWebAssets.props
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\staticwebassets\msbuild.build.Pubali.props
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Pubali.props
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Pubali.props
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\staticwebassets.pack.json
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout_Login.cshtml.rz.scp.css
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\scopedcss\bundle\Pubali.styles.css
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\scopedcss\projectbundle\Pubali.bundle.scp.css
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.Up2Date
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\refint\Pubali.dll
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.pdb
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.genruntimeconfig.cache
+D:\New folder (2)\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\ref\Pubali.dll
+D:\Intern\MVC\Pubali\Pubali\Pubali\obj\Debug\net6.0\Pubali.csproj.Up2Date

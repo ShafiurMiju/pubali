@@ -34,18 +34,18 @@ namespace Pubali.Controllers
                     {
                         _connectionString.Open();
 
-                        using (var command = new OracleCommand("pubali.login_user", _connectionString))
+                        using (var command = new OracleCommand("pubali.login", _connectionString))
                         {
                             command.CommandType = CommandType.StoredProcedure;
 
-                            command.Parameters.Add("p_username", OracleDbType.Varchar2, direction: ParameterDirection.Input).Value = u.Email;
-                            command.Parameters.Add("p_password", OracleDbType.Varchar2, direction: ParameterDirection.Input).Value = u.Password;
+                            command.Parameters.Add("email", OracleDbType.Varchar2, direction: ParameterDirection.Input).Value = u.Email;
+                            command.Parameters.Add("password", OracleDbType.Varchar2, direction: ParameterDirection.Input).Value = u.Password;
 
-                            command.Parameters.Add("p_result", OracleDbType.Int32, ParameterDirection.Output);
+                            command.Parameters.Add("result", OracleDbType.Int32, ParameterDirection.Output);
 
                             command.ExecuteNonQuery();
 
-                            if ((command.Parameters["p_result"].Value).ToString() == "1")
+                            if ((command.Parameters["result"].Value).ToString() == "1")
                             {
                                 HttpContext.Session.SetString("LoggedInUser", u.Email);
                                 return RedirectToAction("Dashboard", "Dashboard");

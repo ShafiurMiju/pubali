@@ -32,6 +32,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Dashboard}/{action=lawOfficer}/{id?}");
+    pattern: "{controller=Dashboard}/{action=FileSuit}/{id?}");
 
 app.Run();

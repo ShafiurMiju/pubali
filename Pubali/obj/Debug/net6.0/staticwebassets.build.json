@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MZ3tp+yUvJ9/QhjsKOVwNJy3C2lRqItZnZkqAuG5bUo=",
+  "Hash": "6QGk28A7caUFyeyWQAttkp3MTLFJBBb2pRQHOasi/rg=",
   "Source": "Pubali",
   "BasePath": "_content/Pubali",
   "Mode": "Default",
@@ -1326,6 +1326,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Logo_dashboard.svg"
+    },
+    {
+      "Identity": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\pexels-christina-morillo-1181690 1.png",
+      "SourceId": "Pubali",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\",
+      "BasePath": "_content/Pubali",
+      "RelativePath": "pexels-christina-morillo-1181690 1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pexels-christina-morillo-1181690 1.png"
     },
     {
       "Identity": "D:\\Intern\\MVC\\Pubali\\Pubali\\Pubali\\wwwroot\\profile.png",
